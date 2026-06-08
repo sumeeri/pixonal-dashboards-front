@@ -1,0 +1,84 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: white;
+  font-family: RadioGrotesk, 'Radio Grotesk', sans-serif;
+  user-select: none;
+}
+
+body {
+  background: #03032d linear-gradient(178.85deg, #041546 2.67%, rgba(6, 26, 83, 0.33) 99.01%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h1 {
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.mapboxgl-control-container {
+  position: absolute !important;
+  z-index: 101;
+  right: 0;
+  top: 0;
+}
+.mapboxgl-ctrl-attrib-inner {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9da3dc;
+  border-radius: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
+}

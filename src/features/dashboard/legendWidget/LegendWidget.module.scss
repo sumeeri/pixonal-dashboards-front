@@ -1,0 +1,51 @@
+.wrapper {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border-radius: 8px;
+  border: 1px solid #9da3dc33;
+}
+
+.deactivated {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+  }
+}
+
+.delimiter {
+  border-bottom: 1px solid #9da3dc33;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: capitalize;
+
+  svg {
+    width: 20px;
+    opacity: 0.5;
+  }
+}

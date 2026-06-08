@@ -1,0 +1,16 @@
+.wrapper {
+  position: absolute;
+  bottom: 32px;
+  z-index: 10;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  pointer-events: none;
+}

@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  span {
+    line-height: 20px;
+  }
+
+  span:first-child {
+    text-transform: capitalize;
+  }
+
+  span:last-child {
+    font-weight: 700;
+  }
+}

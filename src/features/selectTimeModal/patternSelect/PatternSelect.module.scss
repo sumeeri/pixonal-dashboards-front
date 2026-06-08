@@ -1,0 +1,16 @@
+.wrapper {
+  :global {
+    .MuiOutlinedInput-root {
+      padding: 16px;
+      border: 1px solid #9da3dc33;
+      border-radius: 8px;
+      width: 100%;
+      color: #9da3dc;
+
+      svg {
+        width: 18px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

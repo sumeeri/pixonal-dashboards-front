@@ -1,0 +1,92 @@
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(30px);
+  border-radius: 8px;
+  width: max-content;
+  border: 1px solid #9da3dc33;
+
+  svg {
+    width: 13px;
+    stroke: #9da3dc;
+  }
+
+  & .mainBlock {
+    .year {
+      opacity: 1;
+      font-size: 16px;
+      pointer-events: all;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .yearActive {
+      background-color: #4d5eff;
+    }
+  }
+
+  .calendar {
+    svg {
+      stroke: #fff;
+      margin-right: 10px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & button:first-child {
+      color: #9298ca;
+      background-color: transparent;
+    }
+  }
+}
+
+.quickPick {
+  pointer-events: all;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #9da3dc;
+  border-right: 1px solid #9da3dc4d;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid #9da3dc4d;
+}
+
+.selectedRangeHeader {
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.selectedRangeWrapper {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.selectedRange {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #9da3dc;
+}

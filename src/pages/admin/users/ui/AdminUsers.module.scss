@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h1 {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px;
+    color: #ffffff;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #9298ca;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid #9da3dc33;
+  padding-top: 30px;
+}

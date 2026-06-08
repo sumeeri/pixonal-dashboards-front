@@ -1,0 +1,20 @@
+.tabPanel {
+  width: 436px;
+  height: calc(100vh - 305px);
+  backdrop-filter: blur(30px);
+  background: #00000066;
+  pointer-events: all;
+  padding: 25px 25px 0 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  
+  &::after {
+    content: '';
+    border-bottom: 1px solid #9DA3DC33;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 68px;
+  }
+}

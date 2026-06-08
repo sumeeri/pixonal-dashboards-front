@@ -1,0 +1,8 @@
+# Single-package workspace root (required for shared pnpm v10+/v11 approve-builds state).
+packages:
+  - '.'
+
+# Allow native/binary postinstall hooks used by Vite / Sass toolchain (pnpm ignores these by default).
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true

@@ -1,0 +1,7 @@
+.performance {
+  grid-auto-columns: auto;
+  display: grid;
+  grid-gap: 30px 40px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 430px);
+}

@@ -1,0 +1,41 @@
+trigger: none
+
+pool:
+  name: RubiusProjects
+  demands: docker
+
+resources:
+  repositories:
+    - repository: CICDTemplates
+      type: git
+      name: ci-cd-templates/ci-cd-templates
+      ref: refs/tags/v1.0.0
+
+stages:
+- template: pr-check-front-template.yml@CICDTemplates
+  parameters:
+    # Параметры для SonarScan
+    sonarGroup: 'sonarqube'
+    nodeVersion: '18'
+    scriptCommand: 'npm install'
+    sonarServiceName: 'sonar-analyze'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    sonarProjectKey: '$(sonar_frontend_key)'
+    cliSources: '.'
+    # Параметры для Build
+    dockerRegistry: 'nexus-cr'
+    dockerRepository: 'pixonal-dashboards-front'
+    dockerfilePath: '**/Dockerfile'
+    dockerTag: '$(Build.BuildNumber)'
+    dockerBuildArguments: '--no-cache'
+    # Параметры для Trivy_Scan
+    versionTrivy: "v0.58.0"
+    imageNameTrivy: 'nexuscr.rubius.com/pixonal-dashboards-front:$(Build.BuildNumber)'
+    pathCode: '.'
+    ignoreUnfixedTrivy: 'true'
+    severitiesTrivy: 'CRITICAL,HIGH'
+    dockerTrivy: 'false'
+    optionsTrivyCode: '--scanners vuln,secret,misconfig --timeout 30m --db-repository nexuscr.rubius.com/trivy/trivy-db:2 --debug'
+    optionsTrivyImage: '--scanners vuln,secret,misconfig --timeout 30m --db-repository nexuscr.rubius.com/trivy/trivy-db:2 --debug'
+    loginDockerConfigTrivy: 'true'

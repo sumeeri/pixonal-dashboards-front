@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.actions {
+  pointer-events: all;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  :global {
+    .MuiIconButton-root {
+      background: #00000066;
+      border: 0.77px solid #9da3dc33;
+
+      height: 46px;
+      width: 46px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.popoverWrapper {
+  background: #00000066;
+  border: 1px solid #9da3dc33;
+  backdrop-filter: blur(30px);
+
+  box-sizing: border-box;
+  padding: 8px;
+  width: 200px;
+}
+
+.popoverButton {
+  height: 52px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}

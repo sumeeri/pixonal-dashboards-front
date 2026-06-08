@@ -1,0 +1,36 @@
+.wrapper {
+  :global {
+    .MuiTable-root {
+      border: 1px solid #9da3dc33;
+      border-radius: 10px;
+    }
+
+    .MuiTableBody-root {
+      & > tr:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .MuiTableCell-root {
+      font-family: RadioGrotesk, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      color: #ffffff;
+      border-bottom: 1px solid #22262f;
+    }
+
+    .MuiTableRow-head {
+      background-color: #22262f;
+    }
+
+    .MuiTableCell-head {
+      color: #9298ca;
+      background-color: #22262f;
+      padding-right: 0;
+    }
+  }
+}

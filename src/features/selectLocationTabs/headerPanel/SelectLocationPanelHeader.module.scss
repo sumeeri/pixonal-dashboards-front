@@ -1,0 +1,24 @@
+.header {
+  padding: 27px 48px;
+  background: #00000066;
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid #9da3dc33;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  pointer-events: all;
+
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.backButtonText {
+  font-size: 22px;
+  line-height: 28px;
+}

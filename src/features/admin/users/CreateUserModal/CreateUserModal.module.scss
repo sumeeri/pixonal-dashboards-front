@@ -1,0 +1,121 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #00000066;
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+}
+
+.header {
+  margin-bottom: 1rem;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    border-bottom: 1px solid #9da3dc33;
+    left: 0;
+    right: 0;
+    top: 58px;
+  }
+
+  p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.footer {
+  align-self: flex-end;
+  display: flex;
+  gap: 16px;
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  line-height: 20px;
+  color: #9298ca;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionItem {
+  display: grid !important;
+  grid-template-columns: 200px 300px 1fr;
+  grid-gap: 16px;
+  align-items: center;
+
+  button {
+    padding: 8px 24px;
+  }
+
+  :global {
+    .MuiCheckbox-root {
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      color: white;
+
+      .MuiSvgIcon-root {
+        width: 18px;
+        height: 18px;
+      }
+
+      &.Mui-checked {
+        color: #4d5efd; // Background color
+      }
+    }
+
+    .MuiSelect-select {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+
+    .MuiOutlinedInput-root {
+      border: 1px solid #9da3dc33;
+      border-radius: 8px;
+
+      font-size: 16px;
+      color: #ffffff;
+
+      input {
+        padding: 8px 16px;
+      }
+    }
+  }
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid #ffffff2b;
+}

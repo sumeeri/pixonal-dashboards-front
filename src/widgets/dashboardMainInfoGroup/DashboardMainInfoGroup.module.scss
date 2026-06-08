@@ -1,0 +1,81 @@
+.wrapper {
+  font-family: RadioGrotesk, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  pointer-events: none;
+  position: absolute;
+  z-index: 20;
+  left: 40px;
+  top: 142px;
+  bottom: 32px;
+
+  height: calc(100vh - 142px - 32px);
+}
+
+.tabs {
+  position: relative;
+  overflow: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 60%;
+    right: -12px;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.delimiter {
+  border-right: 1px solid #9da3dc;
+  height: 25px;
+}
+
+.wrapper .tab {
+  color: white;
+  padding: 8px 12px;
+  border-radius: 40px;
+  min-height: auto;
+  pointer-events: all;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.statisticsWrapper {
+  margin-top: 5px;
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+  }
+}
+
+.description {
+  font-size: 28px;
+  text-transform: capitalize;
+  font-weight: 400;
+  white-space: pre-line;
+  line-height: 42px;
+}
+
+.name {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #9da3dc;
+}
+
+.label {
+  opacity: 0.7;
+}
+
+.value {
+  opacity: 1;
+  display: flex;
+  line-height: normal;
+}

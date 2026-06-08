@@ -1,0 +1,48 @@
+.range {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rangeLabels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  white-space: pre-line;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #9da3dc;
+
+  & span:last-child {
+    text-align: end;
+  }
+}
+
+.disks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    border: 1px solid #9da3dc;
+    background: #9da3dc66;
+  }
+
+  span:nth-child(1) {
+    width: 10px;
+  }
+  span:nth-child(2) {
+    width: 15px;
+  }
+  span:nth-child(3) {
+    width: 20px;
+  }
+}

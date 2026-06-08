@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.wrapperDisabled {
+  opacity: 0.2;
+}
+
+.select {
+  padding: 0;
+  font-family: inherit;
+  border: none;
+  color: #fff;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  gap: 12px;
+  pointer-events: all;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.accordionIcon {
+  width: 13px;
+}
+
+.location {
+  text-wrap: nowrap;
+  font-size: 16px;
+  color: #9da3dc;
+}
+
+.locationDelimiter {
+  border-right: 1px solid #9da3dc;
+  padding-right: 12px;
+}
+
+.locationText {
+  font-size: 16px;
+  text-transform: capitalize;
+}

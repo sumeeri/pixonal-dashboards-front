@@ -1,0 +1,45 @@
+.wrapper {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: all;
+  backdrop-filter: blur(5px);
+  flex-direction: column;
+}
+
+.title {
+  pointer-events: none;
+  font-size: 256px;
+  font-weight: 400;
+  line-height: 260px;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  opacity: 50%;
+  font-size: 32px;
+}
+
+.logo {
+  position: absolute;
+  left: 35px;
+  top: 60px;
+  pointer-events: none;
+  z-index: 101;
+}
+
+.watermark {
+  position: absolute;
+  top: 30px;
+  right: 48px;
+  width: 200px;
+  z-index: 101;
+  mix-blend-mode: screen;
+}

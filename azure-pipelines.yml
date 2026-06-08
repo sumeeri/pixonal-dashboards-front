@@ -1,0 +1,80 @@
+trigger:
+  branches:
+    include: [main, dev]
+  paths: 
+    exclude: 
+    - '*/README.md' 
+    - 'azure-pipelines.yml'
+    - 'azure-pipelines-pr.yml'
+    - 'Dockerfile'
+
+pool:
+  name: RubiusProjects
+  demands: Docker
+
+variables:
+- name: DEPLOY_ENVIRONMENT_NAME
+  ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+    value: prod
+  ${{ if ne( variables['Build.SourceBranchName'], 'main') }}:
+    value: develop
+- name: HOST_VOLUME_PATH
+  ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+    value: /opt/birdseye.pixonal.com/pixonal_data_s3fs
+  ${{ if ne( variables['Build.SourceBranchName'], 'main') }}:
+    value: /opt/apps/birdseye-pixonal.dev.rubius.com/pixonal_data_s3fs
+
+resources:
+  repositories:
+    - repository: CICDTemplates
+      type: git
+      name: ci-cd-templates/ci-cd-templates
+      ref: refs/tags/v1.0.0
+
+name: '1.0$(Rev:.r)'
+
+stages:
+
+#CI stage
+- template: ci-template.yml@CICDTemplates
+  parameters:
+    dockerComposeFileArgsBuild: |
+      FRONTEND_BUILD_NUMBER=$(Build.BuildNumber)
+      DEPLOY_ENVIRONMENT_NAME=$(DEPLOY_ENVIRONMENT_NAME)
+      HOST_VOLUME_PATH=$(HOST_VOLUME_PATH)
+    dockerComposeFileArgsPush: |
+      FRONTEND_BUILD_NUMBER=$(Build.BuildNumber)
+    dockerRegistryEndpoint: 'nexus-cr'
+    dockerComposeFile: 'docker-compose.yml'
+
+#Deploy to DEV server-docker3
+- template: cd-template.yml@CICDTemplates
+  parameters:
+    stageName: 'CD_DEV'
+    displayName: 'CD DEV'
+    condition: ne(variables['Build.SourceBranchName'], 'main')
+    pullDisplayName: 'Pull images on server-docker-3'
+    runDisplayName: 'Run service on server-docker-3'
+    dockerComposeFileArgs: |
+      FRONTEND_BUILD_NUMBER=$(Build.BuildNumber)
+      DEPLOY_ENVIRONMENT_NAME=$(DEPLOY_ENVIRONMENT_NAME)
+      HOST_VOLUME_PATH=$(HOST_VOLUME_PATH)
+    projectName: 'pixonal-dashboard'
+    dockerHostEndpoint: 'server-docker-3'
+    buildImages: false
+
+#Deploy to PROD server-docker-dmz
+- template: cd-template.yml@CICDTemplates
+  parameters:
+    stageName: 'CD_PROD'
+    displayName: 'CD PROD'
+    condition: eq(variables['Build.SourceBranchName'], 'main')
+    pullDisplayName: 'Pull images on server-docker-dmz'
+    runDisplayName: 'Run service on server-docker-dmz'
+    dockerComposeFileArgs: |
+      FRONTEND_BUILD_NUMBER=$(Build.BuildNumber)
+      DEPLOY_ENVIRONMENT_NAME=$(DEPLOY_ENVIRONMENT_NAME)
+      HOST_VOLUME_PATH=$(HOST_VOLUME_PATH)
+    projectName: 'pixonal-dashboard'
+    dockerHostEndpoint: 'server-docker-dmz'
+    buildImages: false

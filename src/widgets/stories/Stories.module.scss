@@ -1,0 +1,39 @@
+.logo {
+  position: absolute;
+  right: 35px;
+  top: 60px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  top: 142px;
+}
+
+.button .backButton {
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  right: 38px;
+  padding: 18px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: normal;
+}
+
+.record {
+  display: flex;
+  gap: 8px;
+  font-family: RadioGrotesk, sans-serif;
+
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  right: 200px;
+}

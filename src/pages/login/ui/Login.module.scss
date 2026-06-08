@@ -1,0 +1,120 @@
+.wrapper {
+  background: #03032d linear-gradient(178.85deg, #041546 2.67%, rgba(6, 26, 83, 0.33) 99.01%);
+
+  width: 100dvw;
+  height: 100dvh;
+  padding: 100px 40px 40px;
+
+  display: grid;
+  justify-items: center;
+  align-items: start;
+
+  &,
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.logo {
+  user-select: none;
+}
+
+.subtitle {
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  background: #00000066;
+  backdrop-filter: blur(30px);
+  border: 1px solid #9da3dc33;
+  padding: 48px;
+  width: 656px;
+  border-radius: 24px;
+
+  .label {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .field {
+    &:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 64px;
+    }
+  }
+
+  .loginButton {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  :global {
+    .MuiOutlinedInput-root {
+      background: #9da3dc66;
+      border: 1px solid #ffffff59;
+      border-radius: 8px;
+      color: #ffffff;
+
+      font-family: RadioGrotesk, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+
+      input {
+        padding: 15px 12px 15px 8px;
+
+        &::placeholder {
+          font-family: RadioGrotesk, sans-serif;
+        }
+
+        &[type='password'] {
+          font-family: Verdana, sans-serif;
+        }
+      }
+    }
+
+    .MuiFormHelperText-root {
+      color: #fd0000;
+      font-size: 1rem;
+    }
+  }
+}
+
+.forgotPasswordButton {
+  font-family: RadioGrotesk, sans-serif;
+  color: #ffffff;
+  text-decoration: underline;
+
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  align-self: end;
+
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}

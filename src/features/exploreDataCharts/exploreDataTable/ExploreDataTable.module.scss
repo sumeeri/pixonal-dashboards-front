@@ -1,0 +1,43 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 16px 12px 16px 16px;
+  gap: 16px;
+}
+
+.labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #748ae4;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: capitalize;
+  font-family: RadioGrotesk, sans-serif;
+  font-variant-numeric: tabular-nums;
+}

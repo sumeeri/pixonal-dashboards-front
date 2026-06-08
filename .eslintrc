@@ -1,0 +1,176 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "simple-import-sort"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+
+    "prettier/prettier": ["error", { "endOfLine": "auto",   "singleQuote": true ,
+    "jsxSingleQuote": false}],
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "format": ["PascalCase"],
+        "selector": "interface"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "vars": "all"
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-var-requires": "off",
+
+    "semi": "warn",
+    "import/no-cycle": "error",
+    "import/no-self-import": "error",
+    "import/named": "off",
+    "import/namespace": [
+      "error",
+      {
+        "allowComputed": true
+      }
+    ],
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArrowFunction": true,
+        "allowObject": true
+      }
+    ],
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "off",
+    "import/no-useless-path-segments": [
+      "error",
+      {
+        "noUselessIndex": true
+      }
+    ],
+
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/tabindex-no-positive": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "warn",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-autofocus": "warn",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": [],
+        "labelAttributes": [],
+        "controlComponents": [],
+        "assert": "htmlFor",
+        "depth": 25
+      }
+    ],
+
+    "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-key": "error",
+    "react/jsx-no-lambda": "off",
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "afterOpening": "allow-multiline",
+        "beforeSelfClosing": "always",
+        "closingSlash": "never"
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "arrow": "parens-new-line",
+        "assignment": "parens-new-line",
+        "condition": "parens-new-line",
+        "declaration": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "ignore",
+        "return": "parens-new-line"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+
+    // TODO: Enable these rules
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "off",
+
+    "member-access": "off",
+    "member-ordering": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-case-declarations": "off",
+    "no-restricted-imports": "off",
+    "no-empty-interface": "off",
+    "no-shadowed-variable": "off",
+    "no-string-literal": "off",
+    "no-unexpected-multiline": "off",
+    "no-unused-expression": "off",
+    "no-var-requires": "off",
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "block": {
+          "balanced": true
+        },
+        "line": {
+          "markers": ["/"]
+        }
+      }
+    ],
+    "react/no-unused-state": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/no-array-index-key": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.ts"],
+      "rules": {
+        "camelcase": "off"
+      }
+    }
+  ]
+}

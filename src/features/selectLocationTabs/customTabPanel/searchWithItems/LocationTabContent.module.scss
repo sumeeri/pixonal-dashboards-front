@@ -1,0 +1,28 @@
+.suggestionsWrapper {
+  position: relative;
+  overflow-y: auto;
+}
+
+.name, .type {
+  align-self: flex-start;
+}
+
+.name {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.type {
+  color: #9DA3DC;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.menu {
+  margin-top: 16px;
+}

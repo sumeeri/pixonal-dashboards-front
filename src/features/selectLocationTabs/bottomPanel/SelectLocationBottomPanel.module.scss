@@ -1,0 +1,46 @@
+.bottomPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  background: #00000066;
+  backdrop-filter: blur(30px);
+  border-top: 1px solid #9da3dc80;
+  pointer-events: all;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & button {
+    font-size: 16px;
+  }
+
+  & button:first-child {
+    background: none;
+    border-color: #9298ca66;
+    color: #9298ca;
+  }
+}
+
+.location {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.selectedLocationTitle {
+  font-size: 18px;
+  line-height: 18px;
+  color: #9da3dc;
+}
+
+.selectedLocation {
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: capitalize;
+}

@@ -1,0 +1,122 @@
+.exploreDataButton {
+  pointer-events: all;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.exploreDataIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #9da3dc33;
+  border-radius: 100%;
+  background: #49519780;
+  backdrop-filter: blur(30px);
+}
+
+.wrapper {
+  display: flex;
+  pointer-events: all;
+
+  :global {
+    .os-scrollbar {
+      --os-padding-axis: 16px;
+      --os-track-bg: #ffffff0d;
+      --os-handle-bg: #ffffff33;
+      --os-handle-bg-hover: #ffffff33;
+      --os-handle-bg-active: #ffffff33;
+    }
+  }
+}
+
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+
+  background: #00000066;
+  backdrop-filter: blur(30px);
+  border-radius: 24px;
+  border: 1px solid #9da3dc33;
+}
+
+.header {
+  height: 46px;
+  width: 100%;
+  border-bottom: 1px solid #9da3dc33;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: RadioGrotesk, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: #9da3dc;
+
+  margin: 12px 16px;
+}
+
+.content {
+  display: grid;
+}
+
+.headerActions {
+  display: flex;
+  height: 100%;
+}
+
+.delimiter {
+  border-right: 1px solid #9da3dc33;
+  height: 100%;
+}
+
+.headerButton {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    height: 100%;
+    width: 52px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    pointer-events: all;
+  }
+
+  svg {
+    width: 16px;
+    path {
+      stroke: #9298ca;
+    }
+  }
+}

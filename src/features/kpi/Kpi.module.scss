@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.exploreChart {
+  display: flex;
+  align-items: flex-start;
+  pointer-events: all;
+
+  > div {
+    flex-grow: 1;
+
+    > div:not([data-id='fallback']) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.title {
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.titleLarge {
+  font-size: 18px;
+  color: #9da3dc;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #9da3dc;
+  margin-bottom: 16px;
+}
+
+.value {
+  display: flex;
+  align-items: last baseline;
+  font-size: 48px;
+}
+
+.valueLarge {
+  display: flex;
+  align-items: center;
+  font-size: 74px;
+}
+
+.valuePostfix {
+  margin-left: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.caption {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.compareBlock {
+  font-size: 22px;
+
+  .comparePercent {
+    font-family: RadioGrotesk, sans-serif;
+  }
+
+  .compareDesc {
+    opacity: 0.7;
+    font-family: RadioGrotesk, sans-serif;
+  }
+}

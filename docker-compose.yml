@@ -1,0 +1,24 @@
+services:
+  pixonal-dashboard:
+    container_name: pixonal-front-${DEPLOY_ENVIRONMENT_NAME}
+    #image: pixonal-dashboard/front:${FRONTEND_BUILD_NUMBER}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    platform: linux/amd64
+    mem_limit: 512m
+    cpus: 2
+    restart: always
+    volumes:
+      - pixonal_data:${FILESTORAGE_DIRECTORIES:-/usr/share/nginx/html/s3-mock}
+    ports:
+      - 127.0.0.1:8080:8080
+    networks:
+      - pixonal-dashboard-network
+volumes:
+  pixonal_data:
+    name: pixonal_data
+    driver: local
+networks:
+  pixonal-dashboard-network:
+    name: pixonal_dashboard_${DEPLOY_ENVIRONMENT_NAME}

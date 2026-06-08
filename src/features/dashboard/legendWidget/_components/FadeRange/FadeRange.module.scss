@@ -1,0 +1,24 @@
+.range {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.gradient {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #00dafe 0%, #0f1761 100%);
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+
+    background: linear-gradient(90deg, #00dafe 0%, rgba(0, 130, 152, 0) 100%);
+    border-radius: 14px;
+  }
+}
